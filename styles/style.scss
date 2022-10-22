@@ -1,0 +1,132 @@
+/*@mixin icon($color) {
+    @extend %box;
+    color: white;
+    background-color: $color ;
+}
+
+
+%box {
+  @include icon;
+}
+
+.box {
+    @include icon(blue);
+  @extend %box;
+}
+
+*/
+
+/*Icons*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.flex {
+  display: flex;
+}
+body {
+  background-color: #333;
+  font-family: sans-serif;
+}
+
+.social-medias {
+  display: flex;
+  flex-flow: column;
+  margin-left: 200px;
+  justify-content: space-around;
+  height: 500px;
+}
+
+.box-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 40px;
+  width: 80px;
+  height: 80px;
+  background-color: #000088;
+  border-radius: 7px;
+}
+
+.box-text {
+  color: white;
+  background-color: #000088;
+  width: 0px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 1.3s;
+  visibility: hidden;
+  h2 {
+    transition: all 0.7s;
+    opacity: 0;
+  }
+}
+.box-icon:hover + .box-text {
+  margin-left: 10px;
+  visibility: visible;
+  width: 250px;
+  h2 {
+    opacity: 1;
+  }
+}
+
+.box-text:hover {
+  margin-left: 10px;
+  visibility: visible;
+  width: 250px;
+  h2 {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.twitter {
+  .box-icon,
+  .box-text {
+    background-color: rgb(0, 166, 255);
+  }
+}
+
+.instagram {
+  .box-icon,
+  .box-text {
+    background-color: rgb(255, 0, 123);
+  }
+}
+
+.google {
+  .box-icon,
+  .box-text {
+    background-color: rgb(255, 21, 0);
+  }
+}
+
+.whatsapp {
+  .box-icon,
+  .box-text {
+    background-color: rgb(0, 221, 33);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .social-medias {
+    margin-left: 30px;
+  }
+  .box-icon {
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+  }
+}

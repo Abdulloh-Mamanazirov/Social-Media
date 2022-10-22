@@ -1,0 +1,151 @@
+/*@mixin icon($color) {
+    @extend %box;
+    color: white;
+    background-color: $color ;
+}
+
+
+%box {
+  @include icon;
+}
+
+.box {
+    @include icon(blue);
+  @extend %box;
+}
+
+*/
+/*Icons*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body {
+  background-color: #333;
+  font-family: sans-serif;
+}
+
+.social-medias {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  margin-left: 200px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 500px;
+}
+
+.box-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  font-size: 40px;
+  width: 80px;
+  height: 80px;
+  background-color: #000088;
+  border-radius: 7px;
+}
+
+.box-text {
+  color: white;
+  background-color: #000088;
+  width: 0px;
+  border-radius: 7px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 1.3s;
+  transition: all 1.3s;
+  visibility: hidden;
+}
+
+.box-text h2 {
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+  opacity: 0;
+}
+
+.box-icon:hover + .box-text {
+  margin-left: 10px;
+  visibility: visible;
+  width: 250px;
+}
+
+.box-icon:hover + .box-text h2 {
+  opacity: 1;
+}
+
+.box-text:hover {
+  margin-left: 10px;
+  visibility: visible;
+  width: 250px;
+}
+
+.box-text:hover h2 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.twitter .box-icon,
+.twitter .box-text {
+  background-color: #00a6ff;
+}
+
+.instagram .box-icon,
+.instagram .box-text {
+  background-color: #ff007b;
+}
+
+.google .box-icon,
+.google .box-text {
+  background-color: #ff1500;
+}
+
+.whatsapp .box-icon,
+.whatsapp .box-text {
+  background-color: #00dd21;
+}
+
+@media screen and (max-width: 500px) {
+  .social-medias {
+    margin-left: 30px;
+  }
+  .box-icon {
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
